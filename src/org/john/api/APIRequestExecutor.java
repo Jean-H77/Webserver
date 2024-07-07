@@ -1,9 +1,8 @@
 package org.john.api;
 
-import org.john.Context;
+import org.john.webserver.WebServerHandler;
 
-import java.io.OutputStream;
-
+@FunctionalInterface
 public interface APIRequestExecutor {
-    void execute(Context context, OutputStream out);
+    void execute(WebServerHandler webServerHandler);
 }

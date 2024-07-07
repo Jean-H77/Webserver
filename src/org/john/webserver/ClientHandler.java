@@ -1,8 +1,7 @@
-package org.john.server;
+package org.john.webserver;
 
-import org.john.Context;
 import org.john.api.APIRequestHandler;
-import org.john.server.request.Request;
+import org.john.webserver.request.Request;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,14 +16,12 @@ public class ClientHandler implements Runnable {
     private final OutputStream outputStream;
     private final InputStream inputStream;
     private final APIRequestHandler apiRequestHandler;
-    private final Context context;
 
-    public ClientHandler(Socket socket, Context context) throws IOException {
+    public ClientHandler(Socket socket, APIRequestHandler apiRequestHandler) throws IOException {
         this.socket = socket;
         this.outputStream = socket.getOutputStream();
         this.inputStream = socket.getInputStream();
-        this.apiRequestHandler = context.apiRequestHandler();
-        this.context = context;
+        this.apiRequestHandler = apiRequestHandler;
     }
 
     @Override
@@ -43,7 +40,7 @@ public class ClientHandler implements Runnable {
 
             apiRequestHandler.getAPI(request.requestMethod(), request.URI())
                     .ifPresent (
-                            apiRequest -> apiRequest.apiRequestExecutor().execute(context, outputStream)
+                            apiRequest -> apiRequest.apiRequestExecutor().execute(new WebServerHandler(request.URI(), inputStream, outputStream))
                     );
 
         } catch (Exception e) {

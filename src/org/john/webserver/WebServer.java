@@ -1,4 +1,4 @@
-package org.john.server;
+package org.john.webserver;
 
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -7,33 +7,33 @@ import java.util.concurrent.Executors;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Server {
-    private static final Logger LOGGER = Logger.getLogger(Server.class.getName());
+public class WebServer {
+    private static final Logger LOGGER = Logger.getLogger(WebServer.class.getName());
     private final Executor threadPool = Executors.newVirtualThreadPerTaskExecutor();
-    private final ServerConfig serverConfig;
+    private final WebServerConfig webServerConfig;
 
     private boolean isRunning;
 
-    private Server(ServerConfig serverConfig) {
-        this.serverConfig = serverConfig;
+    private WebServer(WebServerConfig webServerConfig) {
+        this.webServerConfig = webServerConfig;
     }
 
-    public static Server create(ServerConfig serverConfig) {
-        return new Server(serverConfig);
+    public static WebServer create(WebServerConfig webServerConfig) {
+        return new WebServer(webServerConfig);
     }
 
-    public static Server create() {
-        return new Server(ServerConfig.DEFAULT);
+    public static WebServer create() {
+        return new WebServer(WebServerConfig.DEFAULT);
     }
 
     public void start() {
-        try(ServerSocket serverSocket = new ServerSocket(serverConfig.getPort())) {
+        try(ServerSocket serverSocket = new ServerSocket(webServerConfig.getPort())) {
             isRunning = true;
 
             while(isRunning) {
                 Socket socket = serverSocket.accept();
                 socket.setTcpNoDelay(true);
-                ClientHandler clientHandler = new ClientHandler(socket, serverConfig.getContext());
+                ClientHandler clientHandler = new ClientHandler(socket, webServerConfig.getApiRequestHandler());
                 threadPool.execute(clientHandler);
             }
 
@@ -46,8 +46,8 @@ public class Server {
         isRunning = false;
     }
 
-    public ServerConfig getServerConfig() {
-        return serverConfig;
+    public WebServerConfig getServerConfig() {
+        return webServerConfig;
     }
 
     public boolean isRunning() {

@@ -1,4 +1,4 @@
-package org.john.server.request;
+package org.john.webserver.request;
 
 public record Request(
         RequestMethod requestMethod,

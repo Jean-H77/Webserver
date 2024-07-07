@@ -5,49 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4aee33fc-70d7-42d1-9985-4e91b9498d48" name="Changes" comment="Webserver Get request progress">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/8.5/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/Webserver-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/api/APIRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/api/APIRequestExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/api/APIRequestHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/server/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/server/ServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/server/request/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/john/server/request/RequestMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/john/server/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/john/utils/http/HttpStatusCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/john/utils/http/HttpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/john/utils/json/JSONUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/john/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/api/APIRequestExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/john/api/APIRequestExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/server/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/john/server/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/john/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/john/server/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/john/server/ServerConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,10 +55,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Record" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -98,6 +66,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Jean-H77&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jean-H77/Webserver.git&quot;,
+    &quot;accountId&quot;: &quot;b47a41be-22f2-4aae-ae49-517d9a02fec8&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -222,8 +202,18 @@
       <workItem from="1720323058881" duration="192000" />
       <workItem from="1720324222472" duration="10983000" />
       <workItem from="1720335508363" duration="1084000" />
-      <workItem from="1720336595850" duration="1232000" />
+      <workItem from="1720336595850" duration="1629000" />
+      <workItem from="1720390614125" duration="3138000" />
     </task>
+    <task id="LOCAL-00001" summary="Webserver Get request progress">
+      <option name="closed" value="true" />
+      <created>1720337864870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720337864870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

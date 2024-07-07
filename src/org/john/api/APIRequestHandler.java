@@ -1,6 +1,6 @@
 package org.john.api;
 
-import org.john.server.request.RequestMethod;
+import org.john.webserver.request.RequestMethod;
 
 import java.util.*;
 
