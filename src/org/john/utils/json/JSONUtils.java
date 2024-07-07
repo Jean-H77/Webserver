@@ -6,9 +6,10 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class JSONUtils {
-
+public final class JSONUtils {
     private final static Logger LOGGER = Logger.getLogger(JSONUtils.class.getName());
+
+    private JSONUtils() {}
 
     public static String toJSON(Object obj) {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
