@@ -3,9 +3,10 @@ package org.john.api;
 import org.john.webserver.request.RequestMethod;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class APIRequestHandler {
-    private final Map<RequestMethod, List<APIRequest>> apiRequests = new HashMap<>();
+    private final Map<RequestMethod, List<APIRequest>> apiRequests = new ConcurrentHashMap<>();
 
     public APIRequestHandler() {
         apiRequests.put(RequestMethod.GET, new ArrayList<>());
